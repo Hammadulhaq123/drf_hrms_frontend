@@ -9,9 +9,9 @@ export const ContextAPI = (props) => {
   const primary_bg = 'bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121]'
   const primary_text = 'bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] bg-clip-text text-transparent'
   const light_contrast = 'bg-gray-100';
-  const dark_contrast = 'bg-[#191c24]'
-  const semi_dark_contrast = 'bg-[#0f101f]'
-  const semi_light_contrast = 'bg-gray-50'
+  const dark_contrast = 'bg-[#0e0e10]';
+  const semi_dark_contrast = 'bg-[#1c1c1c]'
+  const semi_light_contrast = 'bg-gray-300'
   const dark_text_color = 'text-white'
   const light_text_color = 'text-black'
   const semi_light_text_color = 'text-gray-500'
