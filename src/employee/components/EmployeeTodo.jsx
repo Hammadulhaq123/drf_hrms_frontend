@@ -7,7 +7,7 @@ const EmployeeTodo = () => {
 
   const { theme, dark_contrast, light_contrast } = useContext(AppContext)
   return (
-    <div className={`w-full sm:w-[48%] lg:w-[31%] xl:w-[32.2%] ${theme == 'dark' ? dark_contrast : light_contrast} h-[30rem] rounded-md`}>
+    <div className={`w-full sm:w-[48.5%] xl:w-[28.5%] ${theme == 'dark' ? dark_contrast : light_contrast} h-[30rem] xl:h-[26rem] rounded-md`}>
 
 
     </div>
