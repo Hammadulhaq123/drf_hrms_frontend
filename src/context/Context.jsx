@@ -19,21 +19,22 @@ export const ContextAPI = (props) => {
 
   return (
     <AppContext.Provider value={
-      { 
-        theme, 
-        setTheme, 
-        dark_background, 
-        light_background, 
-        light_contrast, 
-        dark_contrast, 
-        semi_dark_contrast, 
-        semi_light_contrast, 
-        dark_text_color, 
+      {
+        theme,
+        setTheme,
+        dark_background,
+        light_background,
+        light_contrast,
+        dark_contrast,
+        semi_dark_contrast,
+        semi_light_contrast,
+        dark_text_color,
         light_text_color,
         semi_dark_text_color,
         semi_light_text_color,
         primary_bg,
-        primary_text }}>
+        primary_text
+      }}>
       {props.children}
     </AppContext.Provider>
   );
