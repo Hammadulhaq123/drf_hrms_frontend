@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
-import {SwiperSlide} from "swiper/react"
+import { SwiperSlide } from "swiper/react"
 import { AppContext } from "../../context/Context";
 
 
 
 const EmployeeAnnounements = () => {
 
-    const {theme, dark_contrast, light_contrast} = useContext(AppContext);
+  const { theme, dark_contrast, light_contrast } = useContext(AppContext);
   return (
-    
-    <div className={`h-[30rem] rounded-xl`}>
-            
+
+    <div className={`w-full sm:w-[48%] lg:w-[31%] xl:w-[32.2%]  ${theme == 'dark' ? dark_contrast : light_contrast} h-[30rem] rounded-md`}>
+
     </div>
   );
 };
