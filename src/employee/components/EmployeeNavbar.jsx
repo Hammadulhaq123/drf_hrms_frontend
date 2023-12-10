@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa6";
 import { IoSearchSharp } from "react-icons/io5";
 import { MdBrightness5, MdBrightness4 } from "react-icons/md";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
+
 
 const EmployeeNavbar = () => {
   const {
@@ -19,18 +21,24 @@ const EmployeeNavbar = () => {
   const toggleTheme = () => {
     setTheme(theme == "dark" ? "light" : "dark");
   };
+
+  const toggleSidebar = () => {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.remove("-translate-x-full");
+    sidebar.classList.add("translate-x-0")
+  }
   return (
     <div
-      className={` ${
-        theme == "dark" ? dark_contrast : light_contrast
-      } absolute top-0 left-0 w-full h-16 flex justify-start px-6 items-center gap-4`}
+      className={` ${theme == "dark" ? dark_contrast : light_contrast
+        } absolute top-0 left-0 w-full h-16 flex justify-start px-6 items-center gap-4`}
     >
-      <div className="relative w-48  md:w-72 xl:w-[30rem] flex h-auto gap-2 justify-start items-center">
+
+      <HiOutlineMenuAlt1 className="block lg:hidden text-2xl" onClick={toggleSidebar} />
+      <div className="relative  w-40  md:w-72 xl:w-[30rem] flex h-auto gap-2 justify-start items-center">
         <input
           type="text"
-          className={` ${
-            theme == "dark" ? dark_contrast : light_contrast
-          } rounded-full text-md w-full h-10 px-4 outline-none border-2 border-gray-600 focus:ring-2 focus:ring-[#F27121]`}
+          className={` ${theme == "dark" ? dark_contrast : light_contrast
+            } rounded-full  text-md w-full h-10 px-4 outline-none border-2 border-gray-600 focus:ring-2 focus:ring-[#F27121]`}
           placeholder="Search"
         />
 
@@ -42,7 +50,7 @@ const EmployeeNavbar = () => {
       <div className="w-auto h-full flex gap-3 items-center justify-start ml-auto">
         <Link
           to="/request/new-leave-request/"
-          className={`w-auto md:w-48 rounded-lg font-medium h-8 text-sm bg-green-500 transition-all duration-200 hover:opacity-90 text-white flex items-center justify-start px-3 gap-2`}
+          className={`w-auto md:w-48 rounded-md font-medium h-7 text-sm bg-green-500 transition-all duration-200 hover:opacity-90 text-white flex items-center justify-start px-3 gap-2`}
         >
           <FaPlus />
           <span className="hidden md:block">Create Leave Request</span>
@@ -50,9 +58,8 @@ const EmployeeNavbar = () => {
 
         <button
           onClick={toggleTheme}
-          className={`w-8 h-8 flex items-center justify-center ${
-            theme == "dark" ? dark_background : light_background
-          } rounded-full`}
+          className={`w-8 h-8 flex items-center justify-center ${theme == "dark" ? dark_background : light_background
+            } rounded-full outline-none border-none`}
         >
           {theme == "dark" ? (
             <MdBrightness5 className="text-lg" />
