@@ -5,6 +5,9 @@ import { LuHome } from "react-icons/lu";
 import { GrAnnounce } from "react-icons/gr";
 import EmployeeSidebarLink from './EmployeeSidebarLink';
 import { IoIosArrowBack } from "react-icons/io";
+import { ImStatsBars2 } from "react-icons/im";
+import { FaRegNoteSticky } from "react-icons/fa6";
+import { MdOutlineSick } from "react-icons/md";
 
 const EmployeeSidebar = () => {
 
@@ -25,6 +28,21 @@ const EmployeeSidebar = () => {
             'icon': <GrAnnounce />,
             'title': 'Announcements',
             'href': '/employee/announcements/'
+        },
+        {
+            'icon': <MdOutlineSick />,
+            'title': 'Leaves',
+            'href': '/employee/leaves/'
+        },
+        {
+            'icon': <FaRegNoteSticky />,
+            'title': 'Notes',
+            'href': '/employee/notes/'
+        },
+        {
+            'icon': <ImStatsBars2 />,
+            'title': 'Stats',
+            'href': '/employee/stats/'
         },
     ]
 
@@ -60,7 +78,7 @@ const EmployeeSidebar = () => {
             {
                 iconArr.map((obj, key) => {
                     return (
-                        <EmployeeSidebarLink key={key} icon={obj.icon} title={obj.title} />
+                        <EmployeeSidebarLink key={key} icon={obj.icon} href={obj.href} title={obj.title} />
                     )
                 })
             }

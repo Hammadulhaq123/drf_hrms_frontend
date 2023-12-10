@@ -30,7 +30,7 @@ const EmployeeNavbar = () => {
   return (
     <div
       className={` ${theme == "dark" ? dark_contrast : light_contrast
-        } absolute top-0 left-0 w-full h-16 flex justify-start px-6 items-center gap-4`}
+        } z-[1000] shadow-md ${theme == 'dark' ? 'shadow-[#1c1c1c]' : 'shadow-gray-300'} w-full h-16 flex justify-start px-6 sticky top-0 left-0 items-center gap-4`}
     >
 
       <HiOutlineMenuAlt1 className="block lg:hidden text-2xl" onClick={toggleSidebar} />
