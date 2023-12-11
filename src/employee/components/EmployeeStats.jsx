@@ -11,7 +11,7 @@ const EmployeeStats = () => {
     const { theme, dark_contrast, light_contrast, dark_background, primary_bg } = useContext(AppContext);
 
     return (
-        <div className={`w-full h-96 flex flex-col justify-start items-start gap-3  rounded-md `}>
+        <div className={`w-full h-[50rem] md:h-96 flex flex-col justify-start items-start gap-3  rounded-md `}>
             <div className={`w-full h-[15%] flex items-center justify-between px-6 ${theme == 'dark' ? dark_contrast : light_contrast} text-2xl font-bold rounded-md`}>
                 <span>
                     Attendance Stats
@@ -22,7 +22,7 @@ const EmployeeStats = () => {
 
                 </Link>
             </div>
-            <div className='w-full h-[85%] flex flex-row gap-3 justify-start items-start'>
+            <div className='w-full h-[85%] flex flex-col md:flex-row gap-3 justify-start items-start'>
                 <EmployeeAttendanceGraph />
                 <EmployeeMonthlyStatsPieChart />
 

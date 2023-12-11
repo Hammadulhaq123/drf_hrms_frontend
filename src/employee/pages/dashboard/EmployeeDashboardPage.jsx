@@ -6,9 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { AppContext } from "../../../context/Context";
 import EmployeeAnnounements from "../../components/EmployeeAnnounements";
 import EmployeeLeaves from "../../components/EmployeeLeaves";
-import EmployeeTodo from "../../components/EmployeeTodo";
 import EmployeeWelcome from "../../components/EmployeeWelcome";
 import EmployeeStats from "../../components/EmployeeStats";
+import EmployeeProjects from "../../components/EmployeeProjects";
+import EmployeeNotes from "../../components/EmployeeNotes";
 
 const EmployeeDashboardPage = () => {
   const { theme, dark_contrast, light_contrast } = useContext(AppContext);
@@ -25,8 +26,9 @@ const EmployeeDashboardPage = () => {
 
         <div className="w-full  h-auto flex flex-col flex-wrap sm:flex-row gap-4">
           <EmployeeAnnounements />
+          <EmployeeProjects />
+          <EmployeeNotes />
           <EmployeeLeaves />
-          <EmployeeTodo />
         </div>
       </div>
     </div>

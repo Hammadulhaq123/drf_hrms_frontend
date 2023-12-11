@@ -36,7 +36,7 @@ const EmployeeMonthlyStatsPieChart = () => {
 
 
     return (
-        <div className={`${theme == 'dark' ? dark_contrast : light_contrast} rounded-md w-1/2 lg:w-[20%] h-full p-2 flex items-center justify-center`}>
+        <div className={`${theme == 'dark' ? dark_contrast : light_contrast} rounded-md w-full lg:w-[20%] h-1/2 md:h-full p-2 flex items-center justify-center`}>
             <ResponsiveContainer width="100%" height="100%">
                 <PieChart width={100} height={100}>
                     <Tooltip />

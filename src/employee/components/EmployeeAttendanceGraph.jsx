@@ -167,7 +167,7 @@ const EmployeeAttendanceGraph = () => {
     const { theme, dark_background, light_background, dark_contrast, light_contrast } = useContext(AppContext)
 
     return (
-        <div className={`w-1/2 lg:w-[80%] h-full  flex items-center md:pt-8 md:pr-8 rounded-md justify-center ${theme == 'dark' ? dark_contrast : light_contrast}`}>
+        <div className={`w-full lg:w-[80%] h-full  flex items-center pt-8 pr-8 rounded-md justify-center ${theme == 'dark' ? dark_contrast : light_contrast}`}>
             <ResponsiveContainer wiOTh="100%" height="100%">
                 <BarChart
                     width={100}

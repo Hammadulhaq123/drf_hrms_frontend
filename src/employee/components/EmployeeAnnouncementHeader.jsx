@@ -23,7 +23,7 @@ const EmployeeAnnouncementHeader = () => {
                     <span>
                         Filter
                     </span>
-                    <svg className="w-2.5 h-2.5 ms-3 ml-auto " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <svg className="w-2.5 h-2.5 ms-9 ml-auto " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                     </svg>
                 </button>
@@ -32,10 +32,10 @@ const EmployeeAnnouncementHeader = () => {
                 <div id="filter-dropdown" className={`z-10 hidden absolute  top-10 left-0 rounded-lg shadow-md  ${theme == 'dark' ? 'shadow-[#1c1c1c]' : 'shadow-gray-300'} w-24 ${theme == 'dark' ? semi_dark_contrast : semi_light_contrast}`}>
                     <ul className="py-2 text-sm " aria-labelledby="dropdownHoverButton">
                         <li>
-                            <button className="block px-4 py-2 ">Prior</button>
+                            <button className="block px-4 py-2 ">General</button>
                         </li>
                         <li>
-                            <button className="block px-4 py-2 ">Latest</button>
+                            <button className="block px-4 py-2 ">Prior</button>
                         </li>
                         <li>
                             <button className="block px-4 py-2 ">For me</button>
